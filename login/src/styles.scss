@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100vh;overflow: hidden;display: block;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background: linear-gradient(90deg,#1a075f 0%, #5c0c0c 100%);}
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+#h2c{
+    text-align: center;
+    color: rgb(241, 241, 241);
+    font-weight: 700;
+    text-shadow: 5px 5px black;
+}
+div#centro{
+    text-align: center;
+}
+#logo{
+    height: 100px;
+    width: 100px;
+}
+.yellow{
+    color: rgb(255, 255, 0);
+}

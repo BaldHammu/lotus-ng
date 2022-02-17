@@ -1,0 +1,30 @@
+<div class="conteudo-body">
+<div id="centro"><img src="assets/images/wink.png" id="logo"><br><h2 id="h2c">Insira suas credenciais</h2></div>
+<form>
+    <mat-card> 
+     <p>
+         <mat-form-field appearance="outline">
+           <mat-label>E-mail</mat-label>
+           <input matInput placeholder="Insira seu e-mail" >
+           <mat-icon matSuffix>alternate_email</mat-icon>
+         </mat-form-field>
+     </p>
+
+    <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Confirme seu E-mail</mat-label>
+              <input matInput placeholder="Insira seu e-mail" >
+              <mat-icon matSuffix>alternate_email</mat-icon>
+            </mat-form-field>
+    </p>
+    <p>
+    <button mat-raised-button color="primary" onclick="LoginUser()">Enviar e-mail</button>
+    </p>
+     </mat-card>
+   </form>
+   <div>
+       <p id="loginLink">Ainda não possui um usuario?
+        <a routerLink="/registro" style="color:aliceblue" >Registre-se aqui</a>
+       </p>
+   </div>
+</div>

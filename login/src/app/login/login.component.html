@@ -1,0 +1,36 @@
+<div class="conteudo-body">
+<div id="centro"><img src="assets/images/wink.png" id="logo"><br><h2 id="h2c">Insira suas credenciais</h2></div>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+   <mat-card> 
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Usuario</mat-label>
+          <input matInput type="text" placeholder="Insira seu usuario" required formControlName="email">
+          <mat-error *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">Por Favor preencha o campo.</mat-error>
+          <mat-icon matSuffix>alternate_email</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+    <mat-form-field appearance="outline">
+    <mat-label>Senha</mat-label>
+    <input formControlName="senha" matInput placeholder="Insira sua senha" type="password" [type]="hide? 'password':'text'" required>
+    <mat-error *ngIf="loginForm.controls['senha'].dirty && loginForm.hasError('required','senha')">Por Favor preencha o campo.</mat-error>
+    <i class="material-icons" matSuffix (click)="hide = !hide" style="cursor: pointer;">
+      {{hide? 'visibility':'visibility_off'}}
+
+    </i>
+
+    </mat-form-field>
+    </p>
+    <p>
+    <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+    </p>
+    </mat-card>
+  </form>
+  <div>
+  <p id="loginLink">Esqueceu sua senha?
+  <a routerLink="/esqueci" style="color:aliceblue" >Clique aqui.</a></p><p id="loginLink">
+    Caso não possua um usuario,
+  <a routerLink="/registro" style="color:aliceblue" >Registre-se aqui</a></p>
+</div>  
+</div>

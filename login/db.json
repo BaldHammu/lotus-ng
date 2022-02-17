@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "registro": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "nome": "Daniel Estrela Alves Matos",
+      "email": "daan.estrela@hotmail.com",
+      "senha": "123456",
+      "aniversario": "1998-12-11",
+      "id": 2
+    },
+    {
+      "nome": "Bom dia Flor do Dia",
+      "email": "ola@gmail.com",
+      "senha": "123456",
+      "aniversario": "2022-02-15",
+      "id": 3
+    },
+    {
+      "nome": "bruna yasmim",
+      "email": "oieusouabruna@gmail.com",
+      "senha": "123456",
+      "confirmasenha": "123456",
+      "aniversario": "2011-12-11T02:00:00.000Z",
+      "termo": true,
+      "id": 4
+    },
+    {
+      "nome": "Rodrigo",
+      "email": "guigo.2008@hotmail.com",
+      "senha": "123",
+      "confirmasenha": "123",
+      "aniversario": "2022-02-16T03:00:00.000Z",
+      "termo": true,
+      "id": 5
+    },
+    {
+      "nome": "Alessandra",
+      "email": "asad@aol.com",
+      "senha": "123",
+      "confirmasenha": "123",
+      "aniversario": "2022-01-01T03:00:00.000Z",
+      "termo": true,
+      "id": 6
+    },
+    {
+      "nome": "daniel",
+      "email": "teste@teste.com",
+      "senha": "123",
+      "confirmasenha": "123",
+      "aniversario": "2022-02-08T03:00:00.000Z",
+      "termo": true,
+      "id": 7
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

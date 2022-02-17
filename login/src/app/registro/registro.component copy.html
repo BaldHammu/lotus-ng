@@ -1,0 +1,55 @@
+<form [formGroup]="registroForm" (ngSubmit)="criaUser()">
+    <mat-card> 
+     <h2>Insira suas credenciais</h2>
+     <p>
+         <mat-form-field appearance="outline">
+           <mat-label>E-mail</mat-label>
+           <input matInput placeholder="Insira seu e-mail" required formControlName="email" >
+           <mat-icon matSuffix>alternate_email</mat-icon>
+         </mat-form-field>
+     </p>
+    <p>
+    <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Nome</mat-label>
+              <input matInput placeholder="Insira seu primeiro nome" required formControlName="Nome" >
+              <mat-icon matSuffix>face</mat-icon>
+            </mat-form-field>
+    </p>
+    <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Aniversário</mat-label>
+              <input matInput placeholder="Insira seu aniversario" required formControlName="aniversario" >
+              <mat-icon matSuffix>calendar_today</mat-icon>
+            </mat-form-field>
+    </p>
+    <p>
+     <mat-form-field appearance="outline">
+     <mat-label>Senha</mat-label>
+     <input matInput placeholder="Insira sua senha" type="password" [type]="hide? 'password':'text'" required formControlName="senha">
+     <i class="material-icons" matSuffix (click)="hide = !hide" style="cursor: pointer;">
+       {{hide? 'visibility':'visibility_off'}}
+ 
+     </i>
+  
+     </mat-form-field>
+    </p>
+    <p>
+     <mat-form-field appearance="outline">
+     <mat-label>Confirme sua Senha</mat-label>
+     <input matInput placeholder="Insira sua senha" type="password" [type]="hide? 'password':'text'" required>
+     <i class="material-icons" matSuffix (click)="hide = !hide" style="cursor: pointer;">
+       {{hide? 'visibility':'visibility_off'}}
+ 
+     </i>
+     </mat-form-field>
+     </p>
+     <p>
+     <mat-checkbox class="example-margin" aria-required="true">Eu li e concordo com estes termos e condições.</mat-checkbox>
+     </p>
+     <p>
+    <a routerLink="/login" style="color:aliceblue" id="backLogin">Já possui registro?</a>
+    <button mat-raised-button color="primary" onclick="LoginUser()">Login</button>
+     </p>
+     </mat-card>
+   </form>

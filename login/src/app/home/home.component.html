@@ -1,0 +1,17 @@
+<app-header></app-header>
+<app-footer></app-footer>
+<app-navigation></app-navigation>
+<div class="conteudo-body">
+    <span *ngIf="tchau">
+    <button (click)="boaTarde()" *ngIf="!ola" class="center" >Não clique aqui</button>
+    <button *ngIf="ola" (click)="porqueEstouFazendoIsso()" class="left"> Eu falei para não clicar!!</button>
+    </span>
+    <span *ngIf="!tchau" >
+    <button (click)="esperoQueTenhaUmBomDia()" *ngIf="!tudoBemQuestionmark" class="right" >Por favor deixa o meu perfil do Tinder em Paz (ﾉ≧∇≦)ﾉ</button>
+    </span>
+    <span *ngIf="tudoBemQuestionmark" class="center" >
+        <iframe style="left: 50%;" src="https://www.youtube.com/embed/6iFbuIpe68k?autoplay=1" width="560" height="315" frameborder="0"></iframe>
+    </span>
+
+</div>
+

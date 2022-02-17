@@ -1,0 +1,64 @@
+<div class="conteudo-body">
+<div id="centro"><img src="assets/images/wink.png" id="logo"><br><h2 id="h2c">Insira suas credenciais</h2></div>
+<form [formGroup]="registroForm" (ngSubmit)="criaUser()">
+    <mat-card> 
+     <p>
+         <mat-form-field appearance="outline">
+           <mat-label>E-mail</mat-label>
+           <input matInput type="email" placeholder="Insira seu e-mail" formControlName="email">
+           <mat-icon matSuffix>alternate_email</mat-icon>
+         </mat-form-field>
+     </p>
+    <p>
+    <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Nome</mat-label>
+              <input matInput type="text" placeholder="Insira seu nome" formControlName="nome">
+              <mat-icon matSuffix>face</mat-icon>
+            </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <input matInput [matDatepicker]="picker" placeholder="Escolha uma data" formControlName="aniversario">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker ></mat-datepicker>
+      </mat-form-field>
+    </p>
+    <p>
+     <mat-form-field appearance="outline">
+     <mat-label>Senha</mat-label>
+     <input matInput type="password" placeholder="Insira sua senha" [type]="hide? 'password':'text'" required formControlName="senha">
+     <mat-error *ngIf="registroForm.controls['senha'].dirty && registroForm.hasError('required','senha')">Por Favor preencha o campo.</mat-error>
+     <i class="material-icons" matSuffix (click)="hide = !hide" style="cursor: pointer;" >
+       {{hide? 'visibility':'visibility_off'}}
+ 
+     </i>
+ 
+     </mat-form-field>
+    </p>
+    <p>
+     <mat-form-field appearance="outline">
+     <mat-label>Confirme sua Senha</mat-label>
+     <input matInput type="password" placeholder="Insira sua senha" [type]="hide? 'password':'text'" required formControlName="confirmasenha">
+     <mat-error *ngIf="registroForm.controls['confirmasenha'].dirty && registroForm.hasError('required','confirmasenha')">Por Favor preencha o campo.</mat-error>
+     <mat-error *ngIf="registroForm.hasError('passwordMismatch','confirmasenha')">Senhas não coincidem.</mat-error>
+     <i class="material-icons" matSuffix (click)="hide = !hide" style="cursor: pointer;">
+       {{hide? 'visibility':'visibility_off'}}
+ 
+     </i>
+     </mat-form-field>
+     </p>
+     <p>
+     <mat-checkbox formControlName="termo" class="example-margin" aria-required="true">Eu li e concordo com estes termos e condições.</mat-checkbox>
+     </p>
+     <p>
+    <button mat-raised-button color="primary" [disabled]="!registroForm.valid">Registrar-se</button>
+     </p>
+     </mat-card>
+   </form>
+   <div>
+     <p id="loginLink">Já possui registro?
+      <a routerLink="/login" style="color:aliceblue" >Clique aqui.</a>
+     </p>
+   </div>
+  </div>
