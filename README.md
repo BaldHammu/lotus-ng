@@ -5,6 +5,7 @@ Boa tarde, neste readme irei demonstrar os passos necessarios, para fazer com qu
 Os requisitos são:
 .NodeJS: No meu caso eu utilizei a ultima versão disponibilizada, o codigo foi feito com base no NodeJS 17.5.0.
 https://nodejs.org/pt-br/
+
 .NPM: Junto ao node foi instalado o gerenciador de pacotes NPM 8.3.
 
 Após a instalação dos pacotes iniciais o código deve ser baixado em meu repositório:
