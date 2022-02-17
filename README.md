@@ -1,5 +1,6 @@
 # lotus-ng
 Deliverable 01
+
 Boa tarde, neste readme irei demonstrar os passos necessarios, para fazer com que o website funcione em sua maquina.
 
 Os requisitos são:
